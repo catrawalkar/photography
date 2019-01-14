@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+    <div class="ui container main">
+        <div class="ui six doubling cards">
+            
+            <%foundAlbum.photo.forEach(function(eachPhoto){
+                if(eachPhoto.url && eachPhoto.url.length>0){ %>
+                <div class="card">
+                        <div class="ui medium image">
+                            <img src="<%= eachPhoto.url %>">
+                        </div>
+                </div>
+            <% }}) %>
+            
+            <div class="card">
+                <a href="/album/<%= foundAlbum._id%>/photo/new">
+                    <div class="ui medium image">
+                        <img src="/assets/add_album.png">
+                    </div>
+                    <div class="extra content">
+                        <div class="center aligned author">
+                            Add Album
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+<% include ../partials/footer %>

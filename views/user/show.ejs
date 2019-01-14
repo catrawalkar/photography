@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+
+
+<div class="ui container main">
+    <div class="ui raised segment">
+              <h2><%= currentUser.username %></h2>
+
+        Username: <%= currentUser.username %>
+                Email: <%= currentUser.email %>
+
+        Mobile: <%= currentUser.mobile%>
+
+    </div>
+            
+                
+                
+    <a href="/profile/edit">Edit Profile</a>
+    <a href="/album">View Albums</a>
+</div>
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>

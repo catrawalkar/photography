@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+    <div class="ui container main">
+        <div class="ui six doubling cards">
+            <%foundUser.album.forEach(function(album){%>
+                <div class="card">
+                    <a href="/album/<%=album._id%>">
+                        <div class="ui medium image">
+                            <img src="/assets/add_album.png">
+                        </div>
+                    
+                        <div class="extra content">
+                            <div class="center aligned author">
+                                <%= album.name %>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }); %>
+            
+            <div class="card">
+                <a href="/album/new">
+                    <div class="ui medium image">
+                        <img src="/assets/add_album.png">
+                    </div>
+                    <div class="extra content">
+                        <div class="center aligned author">
+                            Add Album
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+<% include ../partials/footer %>
